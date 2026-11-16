@@ -11,7 +11,7 @@ Claude が次を実行します（`.env` の合鍵を使います）。
 | コマンド | 意味 | 時間 |
 |---|---|---|
 | `npm run bootstrap` | AWS アカウントの初期準備（**チームで最初の 1 回だけ**） | 約 1 分 |
-| `npm run deploy` | 地図画面とサーバー側（Lambda）をまとめて公開 | 約 5 分 |
+| `npm run deploy` | 地図画面（クライアント）とサーバー（Lambda）をまとめて公開 | 約 5 分 |
 
 終わると最後に **`AppUrl = https://〜.cloudfront.net/`** と表示されます。これがあなたのアプリの住所です。スマホでも開けます 📱
 
@@ -20,8 +20,8 @@ Claude が次を実行します（`.env` の合鍵を使います）。
 
 ```
 CloudFront（AppUrl）
- ├─ /        → S3（地図画面＝画面側）
- └─ /api/*   → Lambda（サーバー側 → Bedrock）
+ ├─ /        → S3（地図画面＝クライアント）
+ └─ /api/*   → Lambda（サーバー → Bedrock）
 ```
 
 :::caution[公開 URL の扱い]

@@ -13,7 +13,7 @@ title: 困ったときは
 | `403 Signature expired: … is now earlier than …` | **PC の時計がずれている**（AWS は送信時刻を署名に含めるので、数分以上ずれると拒否される） | 設定 →「日付と時刻」→「時刻を自動的に設定する」をオン・タイムゾーンを「(UTC+09:00) 大阪、札幌、東京」・「今すぐ同期」（Mac は「日付と時刻」→「日付と時刻を自動的に設定」） |
 | `Could not load AWS credentials` | **🚀 Node.js が入っていない**（一番多い）／上の2つのどちらか／🛡️ `sbx run claude .` で起動した | `node --version` を確認 → なければ [1章](01-prepare.md) で入れて、ターミナルを開き直す／同上／🛡️ `sbx env run` で起動する |
 | ログイン画面（Anthropic アカウント）が出る | サンプルのフォルダー以外で起動した | `/exit` → [2-2](02-get-sample.md) でフォルダーに移動してから起動 |
-| モデルが使えない（`AccessDeniedException`） | 使えないモデルを選んだ（例: Fable） | `/model` で Opus / Sonnet / Haiku 5.5 を選ぶ |
+| モデルが使えない（`AccessDeniedException`） | 使えないモデルを選んだ（例: Fable） | `/model` で Opus / Sonnet / Haiku 5.5 を選ぶ（[4-4](04-start-claude.md#4-4-使える-aiモデル)） |
 | `Plugin "aws-core" is enabled … but isn't installed` | プラグイン未インストール | `/plugin` → Errors → Enter、または `claude plugin install aws-core@anthropic-plugin-directory --scope project` |
 | `Plugin "aws-core" is not loaded: the Anthropic Directory's catalog is not on this machine yet` | プラグインの一覧（カタログ）をまだ取ってきていない | `/reload-plugins` を実行（だめなら `/exit` して `claude plugin marketplace update anthropic-plugin-directory`） |
 | `aws-core … not found in marketplace "claude-plugins-official"` | 古いサンプル（入手先の名前が古い） | ZIP をダウンロードし直す |

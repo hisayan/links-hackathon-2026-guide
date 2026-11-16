@@ -2,7 +2,8 @@
 
 最終更新: 2026-11-16 / イベント: 2026-11-28（土）・29（日）
 
-> このファイルはサイトには公開されません（`src/content/docs/` の外にあるため）。ただしリポジトリ自体は public なので、合鍵・アカウント ID などは書かないこと。
+> このファイルは手順書サイトには表示されませんが、GitHub のリポジトリ（public）からは誰でも読めます。
+> 合鍵・アカウント ID・個人名・セキュリティ上の細かい弱点などは書かないこと。それらは手元のメモで管理する。
 
 ## 関係するもの
 
@@ -11,8 +12,7 @@
 | 手順書サイト | https://hisayan.github.io/links-hackathon-2026-guide/ |
 | 手順書リポジトリ | https://github.com/hisayan/links-hackathon-2026-guide （原稿は `src/content/docs/`） |
 | サンプル | https://github.com/hisayan/links-hackathon-2026 |
-| スクショ用スクリプト（ローカルのみ・git 管理外） | `hello-bedrock/tools/`（`shot.mjs` 画面、`term-shot.mjs` Claude Code の画面、`annotate.mjs` 番号付き赤枠） |
-| 6章の検証用コピー（ローカルのみ） | `hello-bedrock/work/ch6`（サンプルの git worktree。不要になったら `git worktree remove`） |
+| スクショ用スクリプト | 作成者の手元のみ（Playwright で画面・Claude Code の画面・番号付き赤枠を作るもの） |
 
 ## 確認済み（2026-11-16）
 
@@ -21,7 +21,7 @@
 - sandbox の Node.js → nodejs.org から v24 を入れる（arm64 / x64 とも OK）
 - aws-core プラグイン・aws-mcp：sandbox でも動く
 - 6章の頼み方 6-2〜6-5：全部動く（6-3・6-5 は 10 分以上かかる）
-- Workshop アカウントで EC2 Windows の起動権限あり（DryRun）。WorkSpaces は Directory Service が禁止で不可
+- 準備用の Workshop アカウントでは、EC2 で Windows を起動できそう（当日のアカウントは未確認）
 
 ---
 
@@ -72,7 +72,7 @@
 ## その他
 
 - [ ] 当日のスライド（Marp）
-- [ ] サイトの favicon（今は 404）
+- [ ] サイトの favicon
 
 ---
 
@@ -80,9 +80,8 @@
 
 ### セキュリティ
 
-- **公開 URL（AppUrl）からは誰でも AI を呼べる**。Lambda の Function URL は認証なし（`authType: NONE`）で、CloudFront を通さず直接も呼べる。SNS に貼らないよう案内済み。悪用が心配なら、簡単な合言葉チェックや CloudFront 経由だけに絞る（OAC）改造を検討
-- **`.env` の中身を Claude に見せない設定は「Read と Edit だけ」**。`cat .env` のようなコマンド経由は `deny` で止めきれない。参加者が「.env を見せて」と頼むと表示されうる
-- **`scripts/aws-credentials.mjs` の出力は絶対に画面に出さない**（合鍵がそのまま出る。準備中に一度やらかした）
+- **公開 URL（AppUrl）を知っている人は、誰でもアプリの AI を使える**。SNS などに貼らないよう案内済み（7章）。終わったら `npm run destroy` を勧める
+- **`.env`（合鍵）は Claude に読ませない設定にしてあるが、万能ではない**。参加者には「合鍵を Claude に見せてと頼まない」「画面共有や写真に写さない」と伝える
 - 公開リポジトリに `.env` を上げないよう、8章の頼み方に「`.env` が含まれていないか確認してから」を入れてある
 
 ### 当日よくありそうなこと

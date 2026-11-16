@@ -139,5 +139,5 @@ Windows で画面の先頭が `PS C:\` なら PowerShell です（`PS` がなけ
 
 - [ ] コースを決めた
 - [ ] 🛡️ `sbx version` が数字を返す / 🚀 `claude --version`・`node --version`・`npm --version` の **3 つ**が数字を返す
-- [ ] GitHub アカウントがある（7章で使う・なくても OK）
+- [ ] GitHub アカウントがある（8章で使う・なくても OK）
 - [ ] PC の充電器を持っていく

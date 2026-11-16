@@ -14,6 +14,8 @@ Claude が `npm install` などを実行し、最後に `http://localhost:5173` 
 
 地図をクリック →「Claude に聞く」で答えが返ってきたら成功です。
 
+![地図をクリックして「Claude に聞く」を押すと、左の枠に AI の答えが表示される](../../assets/shots/maplibre-answer.jpg)
+
 :::tip[☕ Coffee Break：localhost って何？]
 「自分の PC の中だけで開いているお店」です。あなたのブラウザからは見えますが、隣の人の PC からは見えません。
 みんなに見せるには 7 章で「公開」します。

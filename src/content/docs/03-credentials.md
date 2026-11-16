@@ -9,11 +9,14 @@ Claude は AWS の上で動いています。あなたのチーム用の AWS ア
 ## 3-1. Workshop Studio で認証情報を表示する
 
 1. 左のメニュー「**AWS account access**」→「**Get AWS CLI credentials**」をクリック ①
+
+   ![Workshop Studio の左メニューにある「Get AWS CLI credentials」](../../assets/shots/workshop-step1.jpg)
+
 2. 一番左の「**Linux or macOS (bash)**」タブを選ぶ ②
    - **Windows の人もこのタブ** です（理由は下のコラム）
 3. 右上の 📋 **コピーボタン**を押す ③
 
-<!-- TODO: スクリーンショット（①②③ を番号付きで囲む。秘密部分は端まで塗りつぶし） -->
+   ![「AWS account access」の画面。② が bash のタブ、③ がコピーボタン（合鍵の部分は塗りつぶしています）](../../assets/shots/workshop-step2.jpg)
 
 :::tip[☕ Coffee Break：Windows なのに「macOS」のタブでいいの？]
 いいんです。この 4 行は PowerShell に打ち込むのではなく、次の手順で **`.env` というメモ（テキストファイル）に貼るだけ** だからです。

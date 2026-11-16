@@ -42,6 +42,7 @@ title: はじめに ── このガイドでできること
 | [6. インターネットに公開](06-deploy.md) | AWS にデプロイ | 15分 |
 | [7. GitHub に保存](07-github.md) | 自分の作ったものを残す（発展） | 10分 |
 | [付録A PLATEAU](appendix-a-plateau.md) / [付録B Navara](appendix-b-navara.md) | 3D 都市モデルを使う | お好みで |
+| [付録C AWS 上の Windows](appendix-c-cloud-pc.md) | PC にインストールできない人向けのアイデア | お好みで |
 | [困ったときは](troubleshooting.md) / [プロンプト集](prompts.md) | | |
 
 :::tip[☕ Coffee Break：このガイドの読み方]

@@ -47,7 +47,7 @@ export default defineConfig({
             "07-github",
           ],
         },
-        { label: "付録", items: ["appendix-a-plateau", "appendix-b-navara"] },
+        { label: "付録", items: ["appendix-a-plateau", "appendix-b-navara", "appendix-c-cloud-pc"] },
         { label: "困ったとき", items: ["troubleshooting", "prompts"] },
       ],
     }),

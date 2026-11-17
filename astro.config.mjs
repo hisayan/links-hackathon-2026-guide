@@ -50,6 +50,7 @@ export default defineConfig({
         },
         { label: "付録", items: ["appendix-a-plateau", "appendix-b-navara", "appendix-c-cloud-pc"] },
         { label: "困ったとき", items: ["troubleshooting", "prompts"] },
+        "from-author",
       ],
     }),
   ],
